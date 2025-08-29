@@ -8,18 +8,22 @@ import * as path from 'path';
 @Injectable()
 export class GamesService implements OnModuleInit {
   private games: Game[] = [];
-  private readonly dbPath = path.join(__dirname, '..', 'data', 'games.mock.json');
+  private readonly dbPath = path.join(process.cwd(), 'src', 'data', 'games.mock.json');
 
   async onModuleInit() {
     try {
+      console.log('Loading mock data from:', this.dbPath);
       const data = await fs.readFile(this.dbPath, 'utf8');
+      console.log('Raw data:', data);
       const parsedData = JSON.parse(data);
       this.games = parsedData.games.map(game => ({
         ...game,
         releaseDate: new Date(game.releaseDate)
       }));
+      console.log('Loaded games:', this.games);
     } catch (error) {
-      console.error('Error loading mock data:', error);
+      console.error('Error loading mock data:', error.message);
+      console.error('Error stack:', error.stack);
       this.games = [];
     }
   }
