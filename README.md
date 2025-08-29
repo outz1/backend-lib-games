@@ -13,7 +13,7 @@ API REST desenvolvida com NestJS para gerenciamento de jogos, oferecendo endpoin
 ```
 backend-games/
 ├── src/
-│   ├── games/                    # Módulo de jogos
+│   ├── games/                   # Módulo de jogos
 │   │   ├── dto/                 # Data Transfer Objects
 │   │   │   ├── create-game.dto.ts
 │   │   │   └── update-game.dto.ts
