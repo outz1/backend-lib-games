@@ -5,7 +5,7 @@
       "title": "The Legend of Zelda: Breath of the Wild",
       "genre": "Action-Adventure",
       "platform": "Nintendo Switch",
-      "releaseDate": "2017-03-03T00:00:00.000Z",
+      "releaseDate": "2017-03-03",
       "rating": 9.5,
       "price": 59.99
     },
@@ -14,7 +14,7 @@
       "title": "God of War Ragnarök",
       "genre": "Action-Adventure",
       "platform": "PS5",
-      "releaseDate": "2022-11-09T00:00:00.000Z",
+      "releaseDate": "2022-11-09",
       "rating": 9.4,
       "price": 69.99
     },
@@ -23,7 +23,7 @@
       "title": "Red Dead Redemption 2",
       "genre": "Action",
       "platform": "PS4/Xbox One/PC",
-      "releaseDate": "2018-10-26T00:00:00.000Z",
+      "releaseDate": "2018-10-26",
       "rating": 9.7,
       "price": 49.99
     },
@@ -32,7 +32,7 @@
       "title": "Elden Ring",
       "genre": "Action RPG",
       "platform": "PS5/Xbox Series X/PC",
-      "releaseDate": "2022-02-25T00:00:00.000Z",
+      "releaseDate": "2022-02-25",
       "rating": 9.6,
       "price": 59.99
     },
@@ -41,18 +41,9 @@
       "title": "Cyberpunk 2077",
       "genre": "Action RPG",
       "platform": "PS5/Xbox Series X/PC",
-      "releaseDate": "2020-12-10T00:00:00.000Z",
+      "releaseDate": "2020-12-10",
       "rating": 8.5,
       "price": 49.99
-    },
-    {
-      "id": 6,
-      "title": "Eduardo",
-      "genre": "Aspirante a Desenvolvedor",
-      "platform": "PC",
-      "releaseDate": "2005-09-24T00:00:00.000Z",
-      "rating": 10,
-      "price": 200
     }
   ]
 }
