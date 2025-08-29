@@ -1,53 +1,53 @@
 # Games API
 
-API REST desenvolvida com NestJS para gerenciamento de jogos, oferecendo endpoints para operações CRUD e documentação interativa via Swagger.
+REST API developed with NestJS for game management, providing CRUD operation endpoints and interactive documentation via Swagger.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 - [NestJS](https://nestjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Swagger](https://swagger.io/)
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 backend-games/
 ├── src/
-│   ├── games/                   # Módulo de jogos
+│   ├── games/                   # Games module
 │   │   ├── dto/                 # Data Transfer Objects
 │   │   │   ├── create-game.dto.ts
 │   │   │   └── update-game.dto.ts
 │   │   ├── entities/
-│   │   │   └── game.entity.ts   # Definição da entidade Game
-│   │   ├── games.controller.ts   # Controlador com endpoints
-│   │   ├── games.service.ts      # Lógica de negócios
-│   │   └── games.module.ts       # Módulo NestJS
+│   │   │   └── game.entity.ts   # Game entity definition
+│   │   ├── games.controller.ts   # Controller with endpoints
+│   │   ├── games.service.ts      # Business logic
+│   │   └── games.module.ts       # NestJS module
 │   ├── data/
-│   │   └── games.mock.json      # Arquivo de mock (simula banco de dados)
-│   └── main.ts                  # Arquivo principal com configurações
+│   │   └── games.mock.json      # Mock file (simulates database)
+│   └── main.ts                  # Main file with configurations
 ```
 
 ## 🛣️ Endpoints
 
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| GET | `/games` | Lista todos os jogos |
-| GET | `/games/:id` | Busca um jogo específico |
-| POST | `/games` | Cria um novo jogo |
-| PATCH | `/games/:id` | Atualiza um jogo existente |
-| DELETE | `/games/:id` | Remove um jogo |
+| Method | Route | Description |
+|--------|-------|-------------|
+| GET | `/games` | Lists all games |
+| GET | `/games/:id` | Fetches a specific game |
+| POST | `/games` | Creates a new game |
+| PATCH | `/games/:id` | Updates an existing game |
+| DELETE | `/games/:id` | Removes a game |
 
-## 📝 Documentação (Swagger)
+## 📝 Documentation (Swagger)
 
-A documentação completa da API está disponível através do Swagger UI:
+The complete API documentation is available through Swagger UI:
 - URL: http://localhost:3000/api
-- Documentação interativa com todos os endpoints
-- Schemas dos DTOs e entidades
-- Exemplos de requisições e respostas
+- Interactive documentation with all endpoints
+- DTO and entity schemas
+- Request and response examples
 
-## 💾 Mock de Dados
+## 💾 Mock Data
 
-O projeto utiliza um arquivo JSON como mock de banco de dados (`src/data/games.mock.json`):
+The project uses a JSON file as a mock database (`src/data/games.mock.json`):
 
 ```json
 {
@@ -65,35 +65,35 @@ O projeto utiliza um arquivo JSON como mock de banco de dados (`src/data/games.m
 }
 ```
 
-## 🏃‍♂️ Como Executar
+## 🏃‍♂️ How to Run
 
-1. Clone o repositório
+1. Clone the repository
 ```bash
 git clone https://github.com/outz1/backend-games.git
 cd backend-games
 ```
 
-2. Instale as dependências
+2. Install dependencies
 ```bash
 npm install
 ```
 
-3. Execute o servidor
+3. Run the server
 ```bash
-# Desenvolvimento
+# Development
 npm run start:dev
 
-# Produção
+# Production
 npm run start:prod
 ```
 
 ## 🔒 CORS
 
-A API está configurada para aceitar requisições de:
+The API is configured to accept requests from:
 - http://localhost:3000
 - http://localhost:3001
 
-## 🧱 Estrutura de Dados
+## 🧱 Data Structure
 
 ### Game Entity
 ```typescript
@@ -120,44 +120,44 @@ export class CreateGameDto {
     price: number;
 }
 
-// UpdateGameDto (Partial do CreateGameDto)
+// UpdateGameDto (Partial from CreateGameDto)
 export class UpdateGameDto extends PartialType(CreateGameDto) {}
 ```
 
-## 🔄 Fluxo de Dados
+## 🔄 Data Flow
 
-1. Cliente faz requisição HTTP
-2. Controller processa a requisição
-3. Service executa a lógica de negócios
-4. Dados são persistidos no arquivo mock
-5. Resposta é enviada ao cliente
+1. Client sends HTTP request
+2. Controller processes the request
+3. Service executes the business logic
+4. Data is persisted in the mock file
+5. Response is sent back to the client
 
-## 🛠️ Desenvolvimento
+## 🛠️ Development
 
-Para desenvolver e testar a API:
+To develop and test the API:
 
-1. Use o Swagger UI (http://localhost:3000/api)
-2. Teste endpoints via Postman/cURL
-3. Integre com frontend (Next.js, React, etc.)
-4. Monitore logs no console
+1. Use Swagger UI (http://localhost:3000/api)
+2. Test endpoints via Postman/cURL
+3. Integrate with frontend (Next.js, React, etc.)
+4. Monitor logs in the console
 
-## 📚 Recursos Adicionais
+## 📚 Additional Resources
 
-- [Documentação NestJS](https://docs.nestjs.com/)
-- [Documentação Swagger](https://swagger.io/docs/)
+- [NestJS Documentation](https://docs.nestjs.com/)
+- [Swagger Documentation](https://swagger.io/docs/)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 
-## 👥 Contribuição
+## 👥 Contribution
 
-1. Faça o fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
 <a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
@@ -168,8 +168,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
     <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
   <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
 
