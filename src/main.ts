@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -11,6 +12,16 @@ async function bootstrap() {
     credentials: true,
   });
 
-  await app.listen(process.env.PORT ?? 3001); // Usando porta 3001 para não conflitar com o Next.js
+  // Configuração do Swagger
+  const config = new DocumentBuilder()
+    .setTitle('Games API')
+    .setDescription('API para gerenciamento de jogos')
+    .setVersion('1.0')
+    .addTag('games')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
+  await app.listen(process.env.PORT ?? 3000); // Usando porta 3001 para não conflitar com o Next.js
 }
 bootstrap();
