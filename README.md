@@ -1,9 +1,8 @@
 # Games API
 __________________________________________________________________________________________________________________________________________
 <img width="1906" height="865" alt="Screenshot_1" src="https://github.com/user-attachments/assets/0cd0b109-c425-4fb8-8611-77d54965ceed" />
-__________________________________________________________________________________________________________________________________________
 
-REST API developed with NestJS for game management, providing CRUD operation endpoints and interactive documentation via Swagger.
+# REST API developed with NestJS for game management, providing CRUD operation endpoints and interactive documentation via Swagger.
 
 ## 🚀 Technologies
 
