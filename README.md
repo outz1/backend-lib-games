@@ -1,6 +1,6 @@
 # Games API
 
-## [BackEnd Repository] (https://github.com/outz1/frontend-lib-games)
+## 🔗 [FrontEnd Repository](https://github.com/outz1/frontend-lib-games)
 __________________________________________________________________________________________________________________________________________
 <img width="1906" height="865" alt="Screenshot_1" src="https://github.com/user-attachments/assets/0cd0b109-c425-4fb8-8611-77d54965ceed" />
 
